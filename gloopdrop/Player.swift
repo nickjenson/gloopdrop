@@ -36,6 +36,34 @@ class Player: SKSpriteNode {
         self.zPosition = Layer.player.rawValue
     }
     
+    // MARK: - METHODS
+    func setupConstraints(floor: CGFloat) {
+        let range = SKRange(lowerLimit: floor, upperLimit: floor)
+        let lockToPlatform = SKConstraint.positionY(range)
+        
+        constraints = [ lockToPlatform ]
+    }
+    func walk() {
+        // Check for textures
+        guard let walkTextures = walkTextures else {
+            preconditionFailure("Could not find textures!")
+        }
+        // Run animation (forever)
+        startAnimation(textures: walkTextures, speed: 0.25, name: PlayerAnimationType.walk.rawValue, count: 0, resize: true, restore: true)
+    }
+    // Move player node to position indicated
+    func moveToPosition(pos: CGPoint, direction: String, speed: TimeInterval) {
+        switch direction {
+        case "L":
+            xScale = -abs(xScale)
+        default:
+            xScale = abs(xScale)
+        }
+        
+        let moveAction = SKAction.move(to: pos, duration: speed)
+        run(moveAction)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

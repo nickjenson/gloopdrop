@@ -9,7 +9,6 @@ import Foundation
 import SpriteKit
 
 // MARK: - SPRITEKIT HELPERS
-
 // Set up shared z-positions
 enum Layer: CGFloat {
     case background
@@ -30,5 +29,23 @@ extension SKSpriteNode {
             textureArray.append(temp)
         }
         return textureArray
+    }
+    
+    // Start the animation using a name and a count (0 = repeat forever)
+    func startAnimation(textures: [SKTexture], speed: Double, name: String, count: Int, resize: Bool, restore:  Bool) {
+        // Run animation only if animation key doesn't already exist
+        if(action(forKey: name) == nil) {
+            let animation = SKAction.animate(with: textures, timePerFrame: speed, resize: resize, restore: restore)
+            if count == 0 {
+                // Run animation until stopped
+                let repeatAction = SKAction.repeatForever(animation)
+                run(repeatAction, withKey: name)
+            } else if count == 1 {
+                run(animation, withKey: name)
+            } else {
+                let repeatAction = SKAction.repeat(animation, count: count)
+                run(repeatAction, withKey: name)
+            }
+        }
     }
 }
