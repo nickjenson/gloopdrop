@@ -15,6 +15,7 @@
 		E53652722825A856005DB974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53652702825A856005DB974 /* LaunchScreen.storyboard */; };
 		E53652A828261685005DB974 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53652A728261685005DB974 /* Player.swift */; };
 		E53652AA28261774005DB974 /* SpriteKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53652A928261774005DB974 /* SpriteKitHelper.swift */; };
+		E577D013282B37B900B8B6F5 /* Collectible.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577D012282B37B900B8B6F5 /* Collectible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E53652712825A856005DB974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E53652A728261685005DB974 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		E53652A928261774005DB974 /* SpriteKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKitHelper.swift; sourceTree = "<group>"; };
+		E577D012282B37B900B8B6F5 /* Collectible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collectible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +64,12 @@
 				E53652612825A856005DB974 /* AppDelegate.swift */,
 				E53652672825A856005DB974 /* GameScene.swift */,
 				E53652692825A856005DB974 /* GameViewController.swift */,
-				E536526B2825A856005DB974 /* Main.storyboard */,
-				E536526E2825A856005DB974 /* Assets.xcassets */,
+				E577D012282B37B900B8B6F5 /* Collectible.swift */,
 				E53652A728261685005DB974 /* Player.swift */,
 				E53652A928261774005DB974 /* SpriteKitHelper.swift */,
+				E536526B2825A856005DB974 /* Main.storyboard */,
 				E53652702825A856005DB974 /* LaunchScreen.storyboard */,
+				E536526E2825A856005DB974 /* Assets.xcassets */,
 			);
 			path = gloopdrop;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				E53652A828261685005DB974 /* Player.swift in Sources */,
 				E53652682825A856005DB974 /* GameScene.swift in Sources */,
+				E577D013282B37B900B8B6F5 /* Collectible.swift in Sources */,
 				E536526A2825A856005DB974 /* GameViewController.swift in Sources */,
 				E53652AA28261774005DB974 /* SpriteKitHelper.swift in Sources */,
 				E53652622825A856005DB974 /* AppDelegate.swift in Sources */,

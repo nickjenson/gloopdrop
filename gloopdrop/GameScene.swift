@@ -33,6 +33,20 @@ class GameScene: SKScene {
         player.setupConstraints(floor: foreground.frame.maxY)
         addChild(player)
         player.walk()
+        
+        spawnGloop()
+    }
+    // MARK: - GAME FUNCTIONS
+    /* ############################################# */
+    /*          GAME FUNCTIONS START HERE            */
+    /* ############################################# */
+    
+    func spawnGloop() {
+        let collectible = Collectible(collectibleType: CollectibleType.gloop)
+        collectible.position = CGPoint(x: player.position.x, y: player.position.y * 2.5)
+        addChild(collectible)
+        
+        collectible.drop(dropSpeed: TimeInterval(1.0), floorLevel: player.frame.minY)
     }
     
     // MARK: - TOUCH HANDLING

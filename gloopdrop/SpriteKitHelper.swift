@@ -13,7 +13,8 @@ import SpriteKit
 enum Layer: CGFloat {
     case background
     case foreground
-    case player // highest index
+    case player
+    case collectible // highest index
 }
 
 // MARK: - SPRITEKIT EXTENSIONS
