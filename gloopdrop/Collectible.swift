@@ -33,6 +33,7 @@ class Collectible: SKSpriteNode {
         // Call to super.init
         super.init(texture: texture, color: SKColor.clear, size: texture.size())
         
+        // Set up collectible
         self.name = "co_\(collectibleType)"
         self.anchorPoint = CGPoint(x: 0.5, y: 1)
         self.zPosition = Layer.collectible.rawValue
@@ -50,6 +51,7 @@ class Collectible: SKSpriteNode {
         let moveAction = SKAction.move(to: pos, duration: dropSpeed)
         let actionSequence = SKAction.sequence([appear, scale, moveAction])
         
+        // Shrink first, then run fall action
         self.scale(to: CGSize(width: 0.25, height: 1.0))
         self.run(actionSequence, withKey: "drop")
     }
